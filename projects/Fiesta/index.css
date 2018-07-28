@@ -98,7 +98,6 @@ nav a > div {
 .carousel-control-prev, .carousel-control-next {
   opacity: 1;
 }
-
 @media (max-width: 576px) {
   #app-carousel .title {
     max-width: 100%;
@@ -108,11 +107,18 @@ nav a > div {
 }
 
 /* TECH STACK */
+#tech-stack .logos {
+  justify-content: space-evenly;
+}
 #tech-stack .logos img {
   width: auto;
-  /* height: 150px; */
-  height: 12vw;
+  height: 150px;
   object-fit: cover;
+}
+@media (max-width: 576px) {
+  #tech-stack .logos img {
+    height: 22vw;
+  }
 }
 
 /* FOOTER */
