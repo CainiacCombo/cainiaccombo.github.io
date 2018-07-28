@@ -66,22 +66,18 @@ header p {
 }
 
 /* NAV */
-nav button:hover a, nav button.active a {
+nav a.active > div, nav a:hover > div {
   animation: ColorGradient 9s ease infinite;
-}
-nav button:hover > div, nav button.active > div {
   background-color: #f9f9f9;
   transition: background-color 300ms ease, color 150ms ease;
 }
-nav button > div {
-  transition: background-color 300ms ease, color 150ms ease;
-}
-nav button {
+nav a {
   border-width: 2px !important;
 }
-nav a {
-  font-size: 20px;
+nav a > div {
   color: #f9f9f9;
+  font-size: 20px;
+  padding: 10px 25px;
 }
 
 /* APP */
