@@ -13,7 +13,7 @@
   </head>
   <body>
     <header class="jumbotron jumbotron-fluid row align-items-center justify-content-center mb-0 mx-0">
-      <div class="white text-center px-4">
+      <div class="text-center px-4">
         <h1>¡Fiesta!</h1>
         <p><i>Create, organize, and rate parties</i></p>
       </div>
@@ -35,7 +35,8 @@
       </nav>
 
       <div class="tab-content">
-        <section class="tab-pane fade show active" id="app" role="tabpanel" aria-labelledby="app-tab">
+        <section class="tab-pane fade" id="app" role="tabpanel" aria-labelledby="app-tab">
+        <!-- <section class="tab-pane fade show active" id="app" role="tabpanel" aria-labelledby="app-tab"> -->
           <div id="app-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
             <div class="carousel-inner">
               <div class="carousel-item active">
@@ -54,28 +55,28 @@
                       </ol>
                       <div class="carousel-inner">
                         <div class="carousel-item active">
-                          <img src="assets/timeline.png" alt="The timeline page full of party stories." />
+                          <img src="assets/app/create/timeline.png" alt="The timeline page full of party stories." />
                           <div class="carousel-caption w-100">
                             <h5>Timeline</h5>
                             <p>View all the parties your friends are in</p>
                           </div>
                         </div>
                         <div class="carousel-item">
-                          <img src="assets/create.png" alt="The create party form which asks for the name, location, start time, and end time." />
+                          <img src="assets/app/create/create.png" alt="The create party form which asks for the name, location, start time, and end time." />
                           <div class="carousel-caption w-100">
                             <h5>Create Form</h5>
                             <p>Create a party here</p>
                           </div>
                         </div>
                         <div class="carousel-item">
-                          <img src="assets/invite.png" alt="The invite page which includes lists all your friends to be invited." />
+                          <img src="assets/app/create/invite.png" alt="The invite page which includes lists all your friends to be invited." />
                           <div class="carousel-caption w-100">
                             <h5>Invite</h5>
                             <p>Chose to invite your friends</p>
                           </div>
                         </div>
                         <div class="carousel-item">
-                          <img src="assets/invited.png" alt="After invited to a party, a text message is sent." />
+                          <img src="assets/app/create/invited.png" alt="After invited to a party, a text message is sent." />
                           <div class="carousel-caption w-100">
                             <h5>Invited</h5>
                             <p>Once invited to a party, you get a SMS</p>
@@ -97,17 +98,63 @@
             </a>
           </div>
         </section>
-        <section class="tab-pane fade" id="tech-stack" role="tabpanel" aria-labelledby="tech-stack-tab">
-          <article>
-            <h1>Tech Stack</h1>
-            tech stack...
-          </article>
+
+        <section class="tab-pane fade show active mt-5" id="tech-stack" role="tabpanel" aria-labelledby="tech-stack-tab">
+        <!-- <section class="tab-pane fade mt-5" id="tech-stack" role="tabpanel" aria-labelledby="tech-stack-tab"> -->
+          <div class="px-5">
+            <div class="pb-4" id="tech-stack__frontend">
+              <div class="row">
+                <div class="col-4">
+                  <h2 class="pb-2">Frontend</h2>
+                  <i class="fas fa-4x fa-desktop"></i>
+                </div>
+                <div class="col-8">
+                  <div class="row justify-content-around logos">
+                    <div class="col-auto text-center">
+                      <img src="assets/tech-stack/frontend/ionic.png" alt="Ionic Logo" />
+                      <h2 class="mt-2">Ionic</h2>
+                    </div>
+                    <div class="col-auto text-center">
+                      <img src="assets/tech-stack/frontend/cordova.png" alt="Cordova Logo" />
+                      <h2 class="mt-2">Cordova</h2>
+                    </div>
+                    <div class="col-auto text-center">
+                      <img src="assets/tech-stack/frontend/angular.png" alt="Angular Logo" />
+                      <h2 class="mt-2">Angular</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="py-4" id="tech-stack__backend">
+              <div class="row">
+                <div class="col-4">
+                  <h2 class="pb-2">Backend</h2>
+                  <i class="fas fa-4x fa-server"></i>
+                </div>
+                <div class="col-8">
+                  y
+                </div>
+              </div>
+            </div>
+
+            <div class="pt-4" id="tech-stack__ci-cd">
+              <div class="row">
+                <div class="col-4">
+                  <h2 class="pb-2">CI/CD</h2>
+                  <i class="fas fa-4x fa-truck"></i>
+                </div>
+                <div class="col-8">
+                  z
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
+
         <section class="tab-pane fade" id="team" role="tabpanel" aria-labelledby="team-tab">
-          <article>
-            <h1>Team</h1>
-            team...
-          </article>
+          team...
         </section>
       </div>
     </main>

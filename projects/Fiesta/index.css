@@ -29,10 +29,6 @@
   animation: ColorGradient 9s ease infinite;
 }
 
-.white {
-  color: #f8f8f8;
-}
-
 /* OVERRIDES */
 body {
   background-color: transparent;
@@ -53,6 +49,7 @@ header {
   max-height: 700px;
   min-height: 300px;
   background-color: transparent !important;
+  color: #f9f9f9;
 }
 header h1 {
   font-weight: bold;
@@ -70,6 +67,9 @@ nav a.active > div, nav a:hover > div {
   animation: ColorGradient 9s ease infinite;
   background-color: #f9f9f9;
   transition: background-color 300ms ease, color 150ms ease;
+}
+nav a:focus {
+  outline: 0;
 }
 nav a {
   border-width: 2px !important;
@@ -93,7 +93,7 @@ nav a > div {
   bottom: 0;
   padding: 30px 20px;
   padding-top: 35px;
-  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.33) 22%, rgba(0,0,0,0.55) 100%);
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.33) 22%, rgba(0,0,0,0.66) 100%);
 }
 .carousel-control-prev, .carousel-control-next {
   opacity: 1;
@@ -105,6 +105,13 @@ nav a > div {
     flex: unset;
     text-align: center;
   }
+}
+
+/* TECH STACK */
+#tech-stack .logos img {
+  width: 152px;
+  height: 151px;
+  object-fit: cover;
 }
 
 /* FOOTER */
