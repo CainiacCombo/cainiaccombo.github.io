@@ -1,30 +1,50 @@
 /* UTIL CLASSES */
+@keyframes BackgroundGradient {
+  0%, 100% {
+    background-color: cornflowerblue;
+  }
+  30% {
+    background-color: blueviolet;
+  }
+  60% {
+    background-color: mediumvioletred;
+  }
+}
+@keyframes ColorGradient {
+  0%, 100% {
+    color: cornflowerblue;
+  }
+  30% {
+    color: blueviolet;
+  }
+  60% {
+    color: mediumvioletred;
+  }
+}
+
+.bg-gradient {
+  animation: BackgroundGradient 9s ease infinite;
+}
+.col-gradient {
+  animation: ColorGradient 9s ease infinite;
+}
+
 .white {
   color: #f8f8f8;
 }
 
-@keyframes BackgroundGradient {
-  0%, 100% {
-    background: cornflowerblue;
-  }
-  30% {
-    background: blueviolet;
-  }
-  60% {
-    background: mediumvioletred;
-  }
-}
-
-html {
-  animation: BackgroundGradient 9s ease infinite;
-}
-
+/* OVERRIDES */
 body {
-  background: transparent;
+  background-color: transparent;
 }
-
-section {
-  background: #f9f9f9;
+nav, main {
+  background-color: #f9f9f9;
+}
+a {
+  color: unset;
+}
+a:hover {
+  color: unset;
 }
 
 /* HEADER */
@@ -32,7 +52,7 @@ header {
   height: 80vw;
   max-height: 700px;
   min-height: 300px;
-  background: transparent !important;
+  background-color: transparent !important;
 }
 header h1 {
   font-weight: bold;
@@ -45,17 +65,60 @@ header p {
   text-shadow: 3px 3px rgba(0, 0, 0, .2);
 }
 
-/* CREATE */
-/* #create {
+/* NAV */
+nav button:hover a, nav button.active a {
+  animation: ColorGradient 9s ease infinite;
+}
+nav button:hover > div, nav button.active > div {
+  background-color: #f9f9f9;
+  transition: background-color 300ms ease, color 150ms ease;
+}
+nav button > div {
+  transition: background-color 300ms ease, color 150ms ease;
+}
+nav button {
+  border-width: 2px !important;
+}
+nav a {
+  font-size: 20px;
+  color: #f9f9f9;
+}
 
-} */
+/* APP */
+#app-carousel > .carousel-inner {
+  overflow: visible;
+}
+#app-carousel .images img {
+  height: 600px
+}
+#app-carousel .carousel-caption {
+  left: unset;
+  right: unset;
+  bottom: 0;
+  padding: 30px 20px;
+  padding-top: 35px;
+  background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.33) 22%, rgba(0,0,0,0.55) 100%);
+}
+.carousel-control-prev, .carousel-control-next {
+  opacity: 1;
+}
+
+@media (max-width: 576px) {
+  #app-carousel .title {
+    max-width: 100%;
+    flex: unset;
+    text-align: center;
+  }
+}
 
 /* FOOTER */
 footer a {
   color: #f9f9f9;
+  transition: color 250ms ease;
 }
 footer a:hover {
   color: #111;
+  transition: color 250ms ease;
 }
 
 /* FLUID TYPOGRAPHY */
