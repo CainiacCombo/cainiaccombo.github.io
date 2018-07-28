@@ -1,0 +1,60 @@
+/* UTIL CLASSES */
+@keyframes BackgroundGradient {
+  0%, 100% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+}
+
+.bg-gradient {
+  background: linear-gradient(-270deg, cornflowerblue, blueviolet, mediumvioletred);
+  background-size: 500% 500%;
+  animation: BackgroundGradient 9s ease infinite;
+}
+
+.white {
+  color: #f8f8f8;
+}
+
+/* STYLES */
+header {
+  height: 80vw;
+  max-height: 700px;
+  min-height: 300px;
+}
+header h1 {
+  font-weight: bold;
+  font-family: 'Norican', cursive;
+  text-shadow: 5px 5px rgba(0, 0, 0, .2);
+  margin: 0;
+}
+header p {
+  font-family: 'Lato', sans-serif;
+  text-shadow: 3px 3px rgba(0, 0, 0, .2);
+}
+
+/* MEDIA QUERIES */
+header h1 {
+  font-size: 80px;
+}
+header p {
+  font-size: 20px;
+}
+@media screen and (min-width: 250px) {
+  header h1 {
+    font-size: calc(80px + 120 * ((100vw - 250px) / 1350));
+  }
+  header p {
+    font-size: calc(20px + 12 * ((100vw - 250px) / 1350));
+  }
+}
+@media screen and (min-width: 1600px) {
+  header h1 {
+    font-size: 200px;
+  }
+  header p {
+    font-size: 32px;
+  }
+}
