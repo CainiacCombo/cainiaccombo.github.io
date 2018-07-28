@@ -109,8 +109,9 @@ nav a > div {
 
 /* TECH STACK */
 #tech-stack .logos img {
-  width: 152px;
-  height: 151px;
+  width: auto;
+  /* height: 150px; */
+  height: 12vw;
   object-fit: cover;
 }
 
