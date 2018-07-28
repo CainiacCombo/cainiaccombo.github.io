@@ -116,16 +116,19 @@
                 <div class="col-md-9 mt-3 p-0">
                   <div class="row logos">
                     <div class="col-auto text-center p-0">
-                      <img src="assets/tech-stack/frontend/ionic.png" alt="Ionic Logo" />
-                      <!-- <h2 class="mt-2">Ionic</h2> -->
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="frontend" data-tech="ionic">
+                        <img src="assets/tech-stack/frontend/ionic.png" alt="Ionic Logo" />
+                      </a>
                     </div>
                     <div class="col-auto text-center p-0">
-                      <img src="assets/tech-stack/frontend/cordova.png" alt="Cordova Logo" />
-                      <!-- <h2 class="mt-2">Cordova</h2> -->
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="frontend" data-tech="cordova">
+                        <img src="assets/tech-stack/frontend/cordova.png" alt="Cordova Logo" />
+                      </a>
                     </div>
                     <div class="col-auto text-center p-0">
-                      <img src="assets/tech-stack/frontend/angular.png" alt="Angular Logo" />
-                      <!-- <h2 class="mt-2">Angular</h2> -->
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="frontend" data-tech="angular">
+                        <img src="assets/tech-stack/frontend/angular.png" alt="Angular Logo" />
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -141,12 +144,14 @@
                 <div class="col-md-9 mt-3 p-0">
                   <div class="row logos">
                     <div class="col-auto text-center p-0">
-                      <img src="assets/tech-stack/backend/node.png" alt="Node JS Logo">
-                      <!-- <h2 class="mt-2">NodeJS</h2> -->
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="backend" data-tech="node">
+                        <img src="assets/tech-stack/backend/node.png" alt="Node JS Logo">
+                      </a>
                     </div>
                     <div class="col-auto text-center p-0">
-                      <img src="assets/tech-stack/backend/feathers.png" alt="Feathers JS Logo">
-                      <!-- <h2 class="mt-2">FeathersJS</h2> -->
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="backend" data-tech="feathers">
+                        <img src="assets/tech-stack/backend/feathers.png" alt="Feathers JS Logo">
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -162,16 +167,19 @@
                 <div class="col-md-9 mt-3 p-0">
                   <div class="row logos">
                     <div class="col-auto text-center p-0">
-                      <img src="assets/tech-stack/ci-cd/travis.png" alt="Travis CI Logo">
-                      <!-- <h2 class="mt-2">Travis</h2> -->
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="cicd" data-tech="travis">
+                        <img src="assets/tech-stack/ci-cd/travis.png" alt="Travis CI Logo">
+                      </a>
                     </div>
                     <div class="col-auto text-center p-0">
-                      <img src="assets/tech-stack/ci-cd/docker.png" alt="Docker Logo">
-                      <!-- <h2 class="mt-2">Docker</h2> -->
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="cicd" data-tech="docker">
+                        <img src="assets/tech-stack/ci-cd/docker.png" alt="Docker Logo">
+                      </a>
                     </div>
                     <div class="col-auto text-center p-0">
-                      <img src="assets/tech-stack/ci-cd/aws.png" alt="Amazon Web Services Logo">
-                      <!-- <h2 class="mt-2">AWS</h2> -->
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="cicd" data-tech="aws">
+                        <img src="assets/tech-stack/ci-cd/aws.png" alt="Amazon Web Services Logo">
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -183,6 +191,31 @@
         <section class="tab-pane fade" id="team" role="tabpanel" aria-labelledby="team-tab">
           team...
         </section>
+
+        <div class="modal fade" id="tech-stack-modal" tabindex="-1" role="dialog" aria-labelledby="tech-stack-label" aria-hidden="true">
+          <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+              <div class="modal-body p-4">
+                <div class="row">
+                  <div class="col-4">
+                    <img class="tech-stack-modal__img" src="" alt="Loading..." />
+                  </div>
+                  <div class="col-8">
+                    <div class="row mx-0">
+                      <h1 class="tech-stack-modal__name mb-0"></h1>
+                      <p class="tech-stack-modal__version mb-0 ml-1">v</p>
+                      <a class="tech-stack-modal__close mb-auto ml-auto" type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <i class="fas fa-times"></i>
+                      </a>
+                    </div>
+                    <hr class="my-2" />
+                    <p class="tech-stack-modal__text"></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
@@ -199,8 +232,100 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script>
       $(() => {
+        const techStack = {
+          frontend: {
+            ionic: {
+              img: 'assets/tech-stack/frontend/ionic.png',
+              alt: 'Ionic Logo',
+              name: 'Ionic',
+              version: 'v3',
+              text: 'We used Ionic...................................',
+            },
+            cordova: {
+              img: 'assets/tech-stack/frontend/cordova.png',
+              alt: 'Cordova Logo',
+              name: 'Cordova',
+              version: 'v8',
+              text: 'In conjuction with Ionic we used Cordova........',
+            },
+            angular: {
+              img: 'assets/tech-stack/frontend/angular.png',
+              alt: 'Angular Logo',
+              name: 'Angular',
+              version: 'v5',
+              text: 'We used Angular..................',
+            },
+          },
+          backend: {
+            node: {
+              img: 'assets/tech-stack/backend/node.png',
+              alt: 'Node JS Logo',
+              name: 'Nodejs',
+              version: 'v10',
+              text: 'We used node..................',
+            },
+            feathers: {
+              img: 'assets/tech-stack/backend/feathers.png',
+              alt: 'Feathers JS Logo',
+              name: 'Feathersjs',
+              version: 'v3',
+              text: 'We used feathers..................',
+            },
+          },
+          cicd: {
+            travis: {
+              img: 'assets/tech-stack/ci-cd/travis.png',
+              alt: 'Travis Logo',
+              name: 'Travis CI',
+              version: null,
+              text: 'We used travis..................',
+            },
+            docker: {
+              img: 'assets/tech-stack/ci-cd/docker.png',
+              alt: 'Docker Logo',
+              name: 'Docker',
+              version: null,
+              text: 'We used docker..................',
+            },
+            aws: {
+              img: 'assets/tech-stack/ci-cd/aws.png',
+              alt: 'Amazon Web Services Logo Logo',
+              name: 'Amazon Web Services',
+              version: null,
+              text: 'We used aws..................',
+            },
+          },
+        };
+
         $('.carousel').carousel();
         $('[data-toggle="popover"]').popover();
+
+        $('#tech-stack .logos img').hover(function () {
+          $(this).addClass('hovered');
+        });
+        $('#tech-stack .logos img').mouseleave(function () {
+          $(this).removeClass('hovered');
+        });
+
+        $('#tech-stack-modal').on('show.bs.modal', function(event) {
+          const modal = $(this);
+          const button = $(event.relatedTarget);
+
+          const part = button.data('part');
+          const name = button.data('tech');
+          const tech = techStack[part][name];
+
+          const img$ = modal.find('.tech-stack-modal__img');
+          const name$ = modal.find('.tech-stack-modal__name');
+          const version$ = modal.find('.tech-stack-modal__version');
+          const text$ = modal.find('.tech-stack-modal__text');
+
+          img$.attr('src', tech.img);
+          img$.attr('alt', tech.alt);
+          name$.text(tech.name);
+          version$.text(tech.version);
+          text$.text(tech.text);
+        });
       });
     </script>
   </body>
