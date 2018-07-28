@@ -63,21 +63,28 @@ header p {
 }
 
 /* NAV */
-nav a.active > div, nav a:hover > div {
-  animation: ColorGradient 9s ease infinite;
+.navbar-toggler:not(.collapsed) i, .nav-item.active > div, .nav-item:hover > div {
   background-color: #f9f9f9;
+  animation: ColorGradient 9s ease infinite;
   transition: background-color 300ms ease, color 150ms ease;
 }
-nav a:focus {
-  outline: 0;
+.nav-item > div {
+  font-size: 20px;
 }
-nav a {
+.navbar-toggler, .nav-item {
   border-width: 2px !important;
 }
-nav a > div {
+.navbar-toggler i, .nav-item > div {
   color: #f9f9f9;
-  font-size: 20px;
-  padding: 10px 25px;
+  padding: 10px 25px !important;
+}
+.navbar-toggler i {
+  font-size: 26px;
+}
+@media (max-width: 576px) {
+  .nav-item {
+    border-radius: 0;
+  }
 }
 
 /* APP */
