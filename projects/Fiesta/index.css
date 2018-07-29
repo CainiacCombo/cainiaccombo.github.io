@@ -37,6 +37,7 @@ nav, main {
   background-color: #f9f9f9;
 }
 a {
+  cursor: pointer;
   color: unset;
 }
 a:hover {
@@ -121,11 +122,29 @@ header p {
   width: auto;
   height: 150px;
   object-fit: cover;
+  transition: transform 200ms ease;
+}
+#tech-stack .logos img.hovered {
+  transform: scale(1.2);
+  transition: transform 200ms ease;
 }
 @media (max-width: 576px) {
   #tech-stack .logos img {
     height: 22vw;
   }
+}
+
+.tech-stack-modal__img {
+  width: 100%;
+  max-width: 250px;
+  object-fit: cover;
+}
+.tech-stack-modal__version {
+  line-height: 30px;
+  margin-top: auto;
+}
+.tech-stack-modal__close i {
+  font-size: 1.5rem;
 }
 
 /* FOOTER */
