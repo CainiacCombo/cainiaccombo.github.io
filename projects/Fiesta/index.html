@@ -44,7 +44,7 @@
 
       <div class="tab-content">
         <section class="tab-pane fade show active" id="app" role="tabpanel" aria-labelledby="app-tab">
-          <div id="app-carousel" data-flickity='{ "cellSelector": ".app-carousel-cell", "wrapAround": true, "pageDots": false }'>
+          <div id="app-carousel">
             <div class="app-carousel-cell">
               <div class="row align-items-center justify-content-center">
                 <div class="title col-4">
@@ -52,29 +52,29 @@
                   <p>Fill out the party details and invite your friends!</p>
                 </div>
                 <div class="images col-auto p-0">
-                  <div class="app-nested-carousel" id="app__create-carousel" data-flickity='{ "cellSelector": ".create-carousel-cell", "wrapAround": true, "prevNextButtons": false, "pageDots": false, "autoPlay": 5000, "draggable": false }'>
-                    <div class="create-carousel-cell">
+                  <div class="app-nested-carousel" id="app__create-carousel">
+                    <div class="nested-carousel-cell">
                       <img src="assets/app/create/timeline.png" alt="The timeline page full of party stories." />
                       <div class="w-100 text-center">
                         <h5>Timeline</h5>
                         <p>View all the parties your friends are in</p>
                       </div>
                     </div>
-                    <div class="create-carousel-cell">
+                    <div class="nested-carousel-cell">
                       <img src="assets/app/create/create.png" alt="The create party form which asks for the name, location, start time, and end time." />
                       <div class="w-100 text-center">
                         <h5>Create Form</h5>
                         <p>Create a party here</p>
                       </div>
                     </div>
-                    <div class="create-carousel-cell">
+                    <div class="nested-carousel-cell">
                       <img src="assets/app/create/invite.png" alt="The invite page which includes lists all your friends to be invited." />
                       <div class="w-100 text-center">
                         <h5>Invite</h5>
                         <p>Chose to invite your friends</p>
                       </div>
                     </div>
-                    <div class="create-carousel-cell">
+                    <div class="nested-carousel-cell">
                       <img src="assets/app/create/invited.png" alt="After invited to a party, a text message is sent." />
                       <div class="w-100 text-center">
                         <h5>Invited</h5>
@@ -94,7 +94,28 @@
               </div>
             </div>
             <div class="app-carousel-cell">
-              next
+              <div class="row align-items-center justify-content-center">
+                <div class="title col-4">
+                  <h1>Organize</h1>
+                  <p>Plan...</p>
+                </div>
+                <div class="images col-auto p-0">
+                  <div class="app-nested-carousel" id="app__organize-carousel">
+                    <div class="nested-carousel-cell">
+                      <img src="assets/app/create/timeline.png" alt="The timeline page full of party stories." />
+                      <div class="w-100 text-center">
+                        <h5>Chat</h5>
+                        <p>Discuss</p>
+                      </div>
+                    </div>
+                    <div class="w-100 app-nested-carousel-slider">
+                      <ol class="carousel-indicators">
+                        <li data-index="0" data-carousel="#app__organize-carousel" class="active"></li>
+                      </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -408,19 +429,39 @@
           },
         };
 
+        $('#app-carousel').flickity({
+          cellSelector: '.app-carousel-cell',
+          wrapAround: true,
+          pageDots: false,
+        });
+        $('.app-nested-carousel').flickity({
+          cellSelector: '.nested-carousel-cell',
+          wrapAround: true,
+          prevNextButtons: false,
+          pageDots: false,
+          autoPlay: 5000,
+          draggable: false,
+        });
+
+        $('.app-nested-carousel')
+          .flickity()
+          .on('change.flickity', function() {
+            const $carousel = $(this);
+            const { selectedIndex } = $carousel.data('flickity');
+            const $activeIndicator = $carousel.find('.app-nested-carousel-slider li.active');
+            const $indicator = $carousel.find(`.app-nested-carousel-slider li[data-index="${selectedIndex}"]`);
+
+            $activeIndicator.removeClass('active');
+            $indicator.addClass('active');
+          });
+
         $('.app-nested-carousel-slider li').click(function(e) {
           e.preventDefault();
-          const indicator$ = $(this);
-          const carousel = indicator$.data('carousel');
-          const index = indicator$.data('index');
+          const $indicator = $(this);
+          const carousel = $indicator.data('carousel');
+          const index = $indicator.data('index');
 
-          const carousel$ = $(carousel);
-          const activeIndicator$ = $(`${carousel} li.active`);
-
-          activeIndicator$.removeClass('active');
-          indicator$.addClass('active');
-
-          carousel$.flickity('select', index);
+          $(carousel).flickity('select', index);
         });
 
         $('[data-toggle="popover"]').popover();
