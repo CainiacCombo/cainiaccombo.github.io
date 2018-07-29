@@ -10,6 +10,17 @@
     background-color: mediumvioletred;
   }
 }
+@keyframes BorderGradient {
+  0%, 100% {
+    border-color: cornflowerblue;
+  }
+  30% {
+    border-color: blueviolet;
+  }
+  60% {
+    border-color: mediumvioletred;
+  }
+}
 @keyframes ColorGradient {
   0%, 100% {
     color: cornflowerblue;
@@ -24,6 +35,9 @@
 
 .bg-gradient {
   animation: BackgroundGradient 9s ease infinite;
+}
+.border-gradient {
+  animation: BorderGradient 9s ease infinite;
 }
 .col-gradient {
   animation: ColorGradient 9s ease infinite;
