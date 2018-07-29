@@ -115,17 +115,17 @@
                 </div>
                 <div class="col-md-9 mt-3 p-0">
                   <div class="row logos">
-                    <div class="col-auto text-center p-0">
+                    <div class="col-auto text-center p-0 pb-3">
                       <a data-toggle="modal" data-target="#tech-stack-modal" data-part="frontend" data-tech="ionic">
                         <img src="assets/tech-stack/frontend/ionic.png" alt="Ionic Logo" />
                       </a>
                     </div>
-                    <div class="col-auto text-center p-0">
+                    <div class="col-auto text-center p-0 pb-3">
                       <a data-toggle="modal" data-target="#tech-stack-modal" data-part="frontend" data-tech="cordova">
                         <img src="assets/tech-stack/frontend/cordova.png" alt="Cordova Logo" />
                       </a>
                     </div>
-                    <div class="col-auto text-center p-0">
+                    <div class="col-auto text-center p-0 pb-3">
                       <a data-toggle="modal" data-target="#tech-stack-modal" data-part="frontend" data-tech="angular">
                         <img src="assets/tech-stack/frontend/angular.png" alt="Angular Logo" />
                       </a>
@@ -135,7 +135,7 @@
               </div>
             </div>
 
-            <div class="py-5" id="tech-stack__backend">
+            <div class="py-4" id="tech-stack__backend">
               <div class="row align-items-center justify-content-center">
                 <div class="col-md-3 text-center p-0">
                   <i class="fas fa-3x fa-server"></i>
@@ -143,14 +143,52 @@
                 </div>
                 <div class="col-md-9 mt-3 p-0">
                   <div class="row logos">
-                    <div class="col-auto text-center p-0">
+                    <div class="col-auto text-center p-0 pb-3">
                       <a data-toggle="modal" data-target="#tech-stack-modal" data-part="backend" data-tech="node">
                         <img src="assets/tech-stack/backend/node.png" alt="Node JS Logo">
                       </a>
                     </div>
-                    <div class="col-auto text-center p-0">
+                    <div class="col-auto text-center p-0 pb-3">
                       <a data-toggle="modal" data-target="#tech-stack-modal" data-part="backend" data-tech="feathers">
                         <img src="assets/tech-stack/backend/feathers.png" alt="Feathers JS Logo">
+                      </a>
+                    </div>
+                    <div class="col-auto text-center p-0 pb-3">
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="backend" data-tech="mysql">
+                        <img src="assets/tech-stack/backend/mysql.png" alt="MySQL JS Logo">
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="py-4" id="tech-stack__apis">
+              <div class="row align-items-center justify-content-center">
+                <div class="col-md-3 text-center p-0">
+                  <i class="fas fa-3x fa-plug"></i>
+                  <h1 class="display-4 pt-2 mb-0">APIs</h1>
+                </div>
+                <div class="col-md-9 mt-3 p-0">
+                  <div class="row logos">
+                    <div class="col-auto text-center p-0 pb-3">
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="apis" data-tech="twilio">
+                        <img src="assets/tech-stack/apis/twilio.png" alt="Twilio Logo">
+                      </a>
+                    </div>
+                    <div class="col-auto text-center p-0 pb-3">
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="apis" data-tech="cloudinary">
+                        <img src="assets/tech-stack/apis/cloudinary.png" alt="Cloudinary Logo">
+                      </a>
+                    </div>
+                    <div class="col-auto text-center p-0 pb-3">
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="apis" data-tech="gauth">
+                        <img src="assets/tech-stack/apis/gauth.png" alt="Google Auth Logo">
+                      </a>
+                    </div>
+                    <div class="col-auto text-center p-0 pb-3">
+                      <a data-toggle="modal" data-target="#tech-stack-modal" data-part="apis" data-tech="gmaps">
+                        <img src="assets/tech-stack/apis/gmaps.png" alt="Google Maps Logo">
                       </a>
                     </div>
                   </div>
@@ -166,17 +204,17 @@
                 </div>
                 <div class="col-md-9 mt-3 p-0">
                   <div class="row logos">
-                    <div class="col-auto text-center p-0">
+                    <div class="col-auto text-center p-0 pb-3">
                       <a data-toggle="modal" data-target="#tech-stack-modal" data-part="cicd" data-tech="travis">
                         <img src="assets/tech-stack/ci-cd/travis.png" alt="Travis CI Logo">
                       </a>
                     </div>
-                    <div class="col-auto text-center p-0">
+                    <div class="col-auto text-center p-0 pb-3">
                       <a data-toggle="modal" data-target="#tech-stack-modal" data-part="cicd" data-tech="docker">
                         <img src="assets/tech-stack/ci-cd/docker.png" alt="Docker Logo">
                       </a>
                     </div>
-                    <div class="col-auto text-center p-0">
+                    <div class="col-auto text-center p-0 pb-3">
                       <a data-toggle="modal" data-target="#tech-stack-modal" data-part="cicd" data-tech="aws">
                         <img src="assets/tech-stack/ci-cd/aws.png" alt="Amazon Web Services Logo">
                       </a>
@@ -270,6 +308,43 @@
               name: 'Feathersjs',
               version: 'v3',
               text: 'We used feathers..................',
+            },
+            mysql: {
+              img: 'assets/tech-stack/backend/mysql.png',
+              alt: 'MySQL JS Logo',
+              name: 'MySQL',
+              version: 'v8',
+              text: 'We used mysql..................',
+            },
+          },
+          apis: {
+            twilio: {
+              img: 'assets/tech-stack/apis/twilio.png',
+              alt: 'Twilio Logo',
+              name: 'Twilio',
+              version: null,
+              text: 'We used twilio..................',
+            },
+            cloudinary: {
+              img: 'assets/tech-stack/apis/cloudinary.png',
+              alt: 'cloudinary Logo',
+              name: 'Cloudinary',
+              version: null,
+              text: 'We used cloudinary..................',
+            },
+            gauth: {
+              img: 'assets/tech-stack/apis/gauth.png',
+              alt: 'Google Auth Logo',
+              name: 'Google OAuth',
+              version: null,
+              text: 'We used gauth..................',
+            },
+            gmaps: {
+              img: 'assets/tech-stack/apis/gmaps.png',
+              alt: 'Google Maps Logo',
+              name: 'Google Maps',
+              version: null,
+              text: 'We used gmaps..................',
             },
           },
           cicd: {
