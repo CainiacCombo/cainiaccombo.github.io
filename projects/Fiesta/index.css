@@ -136,6 +136,7 @@ header p {
 
 .tech-stack-modal__img {
   width: 100%;
+  max-width: 250px;
   object-fit: cover;
 }
 .tech-stack-modal__version {
