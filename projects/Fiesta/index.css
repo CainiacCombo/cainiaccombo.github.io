@@ -103,6 +103,12 @@ header p {
 }
 
 /* APP */
+.flickity-prev-next-button {
+  animation: BackgroundGradient 9s ease infinite;
+}
+.flickity-prev-next-button svg {
+  fill: #f9f9f9;
+}
 .app-nested-carousel {
   height: 600px;
   min-width: 338px;
