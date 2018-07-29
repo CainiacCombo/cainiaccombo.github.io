@@ -114,11 +114,11 @@ header p {
 .app-carousel-cell {
   width: 100%;
 }
-.create-carousel-cell {
+.nested-carousel-cell {
   height: 600px;
   min-width: 338px;
 }
-.create-carousel-cell > div {
+.nested-carousel-cell > div {
   position: absolute;
   bottom: 0;
   color: #f9f9f9;
