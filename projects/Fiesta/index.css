@@ -60,9 +60,8 @@ a:hover {
 
 /* HEADER */
 header {
-  height: 80vw;
-  max-height: 700px;
-  min-height: 300px;
+  height: 100vh;
+  min-height: 450px;
   background-color: transparent !important;
   color: #f9f9f9;
 }
@@ -111,7 +110,7 @@ header p {
 }
 .app-nested-carousel {
   height: 600px;
-  min-width: 338px;
+  min-width: 328px;
 }
 .app-nested-carousel img {
   height: 600px;
@@ -121,6 +120,7 @@ header p {
 
 .app-carousel-cell {
   width: 100%;
+  overflow: hidden;
 }
 .nested-carousel-cell {
   height: 600px;
